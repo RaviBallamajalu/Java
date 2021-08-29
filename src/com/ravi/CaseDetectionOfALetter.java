@@ -1,3 +1,5 @@
+package com.ravi;
+
 import java.util.Scanner;
 
 public class CaseDetectionOfALetter {

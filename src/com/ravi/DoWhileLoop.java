@@ -1,3 +1,5 @@
+package com.ravi;
+
 public class DoWhileLoop {
     public static void main(String[] args) {
        int i=1;
