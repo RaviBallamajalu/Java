@@ -4,7 +4,7 @@
 
 Simple Program
 ```java
-public class FirstProgram {
+public class com.ravi.FirstProgram {
     public static void main(String[] args) {
         System.out.println("Hello, Welcome to Java");
     }
@@ -47,7 +47,7 @@ Integer number1=10;//Here Interger is datatype and number1 is variable which hol
   * Checks the condition mentioned in 'if'- If the condition is true then the if block is executed and if false else block is executed.
 
 ```java
-public class IfElse {
+public class com.ravi.IfElse {
     public static void main(String[] args) {
         Integer number1=10;
 
@@ -66,7 +66,7 @@ number1 is greater
 * for
   * Used when the ceratin line is required to be executed for fixed number of times.
 ```java
-public class For {
+public class com.ravi.For {
     public static void main(String[] args) {
         Integer number=0;
         for(int i=0;i<5;i++)
@@ -87,7 +87,7 @@ output:
   * Used when the ceratain Line is to excetued until the the condition mentioned in while becomes false.
   
  ```java
- public class WhileLoop {
+ public class com.ravi.WhileLoop {
     public static void main(String[] args) {
         int i=1;
         while(i<=5){
@@ -109,7 +109,7 @@ output:
   * Used when iteration is not fixed and it is required to execute the loop at least once.
   
   ```Java
-  public class DoWhileLoop {
+  public class com.ravi.DoWhileLoop {
     public static void main(String[] args) {
         int i=1;
         do{
