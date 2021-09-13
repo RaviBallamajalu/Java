@@ -2,7 +2,7 @@ package com.ravi;
 
 import java.util.Scanner;
 
-public class NumberOfOccuranceOfIntegers {
+public class NumberOfOccurrenceOfIntegers {
     public static void main(String arr[]) {
         Scanner sc = new Scanner(System.in);
         Integer number;
