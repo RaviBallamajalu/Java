@@ -36,6 +36,7 @@ public static void main(String[] args){
 Books books=new Books(100,"MyBook");
 /*to get the data in books object. we have to the getter methods and if not given any values in object creation using the parameterized constructor, Then the values should be set using the setter. 
 example:
+Books books=new Books();
 books.setPageNo(100);
 books.setName("MyBooks");
 */
