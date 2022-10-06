@@ -13,6 +13,10 @@ public class com.ravi.FirstProgram {
 output:
 Hello, Welcome to Java
 
+## Class & Object 
+* Class is a Blue Print of Object. It defines the Object.
+* Object is actual instance of a class which is present in the world / real time.
+
 ## Data Types And Variables
 
 * Variable holds the value.
@@ -125,3 +129,5 @@ output:
 3
 4
 5
+
+
