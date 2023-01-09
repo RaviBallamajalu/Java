@@ -21,6 +21,7 @@ public class CaseDetectionOfALetter {
 
         System.out.println("Enter a string");
         String a = scan.next();
+        System.out.println(a.length());
 
         for (int i = 0; i < a.length(); i++) {
             char ch = a.charAt(i);

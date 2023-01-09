@@ -14,7 +14,7 @@ public class BinarySearch {
     }
 
     public static int search(int[] nums, int key) {
-        int ret = -1;
+        int res = -1;
         int first = 0;
         int last = nums.length - 1;
 
@@ -26,7 +26,7 @@ public class BinarySearch {
             }
 
           else  if (nums[mid] == key) {
-                ret = mid;
+                res = mid;
                 break;
             } else {
                 last = mid - 1;
@@ -35,7 +35,7 @@ public class BinarySearch {
             mid = (first + last) / 2;
         }
 
-        return ret;
+        return res;
 
     }
 }
