@@ -41,5 +41,25 @@ public class Array {
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + " ");
         }
+
+        //Reverse an Array and store it
+        System.out.println();
+       int[] rev =reverseArr(intArray);
+        for (int i:rev
+             ) {
+            System.out.print(i + " ") ;
+
+        }
+    }
+
+    private static int[] reverseArr(Integer[] intArray) {
+
+        int[] rev=new int[intArray.length];
+        int j=0;
+        for(int i=intArray.length-1;i>=0;i--){
+            rev[j]=intArray[i];
+        j++;
+        }
+        return rev;
     }
 }
