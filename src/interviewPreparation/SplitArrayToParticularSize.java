@@ -1,11 +1,11 @@
-package oOps;
+package interviewPreparation;
 
 import java.util.*;
 
-class Main {
+public class SplitArrayToParticularSize {
     public static void main(String[] args) {
         int[] original = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int splitSize = 3;
+        int splitSize = 11;
 		
 		/* expected Output 
 		[0, 1, 2]
@@ -20,19 +20,23 @@ class Main {
 
     public static List<int[]> splitArray(int[] array, int splitSize) {
 
+
         List<int[]> list = new ArrayList<int[]>();
         ArrayList<Integer> integers = new ArrayList<>();
-        for (int i = 0; i < array.length; i++) {
-            integers.add(array[i]);
-            if (integers.size() == splitSize || i == array.length - 1) {
-             //   list.add(convertToArray(integers));
+        if (splitSize <= array.length && splitSize > 1) {
+            for (int i = 0; i < array.length; i++) {
+                integers.add(array[i]);
+                if (integers.size() == splitSize || i == array.length - 1) {
+                    //   list.add(convertToArray(integers));
 
-                //using streams
-                       list.add(integers.stream().mapToInt(value -> value.intValue()).toArray());
-                integers = new ArrayList<>();
+                    //using streams
+                    list.add(integers.stream().mapToInt(value -> value.intValue()).toArray());
+                    integers = new ArrayList<>();
+                }
             }
+        } else {
+            System.out.println("Split not within specified range");
         }
-
 
         return list;
 
@@ -43,7 +47,6 @@ class Main {
         for (int i = 0; i < integers.size(); i++) {
             a[i] = integers.get(i);
         }
-
         return a;
     }
 }

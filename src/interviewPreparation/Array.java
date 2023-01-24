@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
+import static sun.swing.MenuItemLayoutHelper.max;
+
 public class Array {
     public static void main(String[] args) {
 
@@ -20,5 +22,10 @@ public class Array {
             System.out.println(a1);
         }
 
+
+        int b= Arrays.stream(a).sorted().max().getAsInt();
+        int c=Arrays.stream(a).sorted().min().getAsInt();
+
+        System.out.println(b+" "+c);
     }
 }
