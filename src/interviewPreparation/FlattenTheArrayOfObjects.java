@@ -2,6 +2,7 @@ package interviewPreparation;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 public class FlattenTheArrayOfObjects {
@@ -11,30 +12,23 @@ public class FlattenTheArrayOfObjects {
         Integer[] flattenedArray = flatten(array);
 
         System.out.println(Arrays.toString(flattenedArray));
-
-
     }
 
     public static Integer[] flatten(Object[] inputArray) throws Exception {
 
-        if (inputArray == null)
-            return null;
+        List<Integer> integers = new ArrayList<>();
 
-        List<Integer> myList = new ArrayList<Integer>();
-
-        for (Object element : inputArray) {
-            if (element instanceof Integer) {
-                myList.add((Integer) element);
-                //System.out.println(myList+" : inside if");
-            } else if (!(element instanceof Integer)) {
-                myList.addAll(Arrays.asList(flatten((Object[]) element)));
-                //System.out.println(myList+" : inside else if");
-            } else {
-                System.out.println("Cannot be flattened");
+        for (Object o : inputArray) {
+            if (o instanceof Integer) {
+                integers.add((Integer) o);
+            } else if (o instanceof Object) {
+                try {
+                    integers.addAll(Arrays.asList(flatten((Object[]) o)));
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
             }
         }
-
-        //System.out.println(myList);
-        return myList.toArray(new Integer[myList.size()]);
+       return integers.toArray(new Integer[integers.size()]);
     }
 }

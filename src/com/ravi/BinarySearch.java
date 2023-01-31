@@ -4,11 +4,11 @@ public class BinarySearch {
 
     public static void main(String[] args) {
 
-        int [] nums={-1,0,3,5,9,12};
+        int[] nums = {-1, 0, 3, 5, 9, 12};
 
-        int key=9;
+        int key = 9;
 
-        int s=search(nums,key);
+        int s = search(nums, key);
 
         System.out.println(s);
     }
@@ -23,9 +23,7 @@ public class BinarySearch {
         while (first <= last) {
             if (nums[mid] < key) {
                 first = mid + 1;
-            }
-
-          else  if (nums[mid] == key) {
+            } else if (nums[mid] == key) {
                 res = mid;
                 break;
             } else {

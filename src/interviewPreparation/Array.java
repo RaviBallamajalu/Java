@@ -25,7 +25,52 @@ public class Array {
 
         int b= Arrays.stream(a).sorted().max().getAsInt();
         int c=Arrays.stream(a).sorted().min().getAsInt();
+        int d=Arrays.stream(a).sum();
 
-        System.out.println(b+" "+c);
+
+        System.out.println(b+" "+c+" sum "+d);
+
+        System.out.println();
+        int[] abc=new int[]{1,2,3,4,5,6,7,8,9,0};
+
+        int[] thirdLargestinArray=new int[]{1,6,5,4,3};
+
+        for(int i=0;i<thirdLargestinArray.length-1;i++){
+            for (int j=i+1;j<thirdLargestinArray.length;j++) {
+                if (thirdLargestinArray[i] > thirdLargestinArray[j]) {
+                    int temp = thirdLargestinArray[j];
+                    thirdLargestinArray[j] = thirdLargestinArray[i];
+                    thirdLargestinArray[i] = temp;
+                }
+            }
+        }
+        System.out.println(thirdLargestinArray[thirdLargestinArray.length-3]);
+
+        System.out.println("Sorted in Ascending");
+        for (Integer i:thirdLargestinArray) {
+            System.out.print(i+" ");
+        }
+
+        for(int i=0;i<thirdLargestinArray.length-1;i++){
+            for (int j=i+1;j<thirdLargestinArray.length;j++) {
+                if (thirdLargestinArray[i] < thirdLargestinArray[j]) {
+                    int temp = thirdLargestinArray[j];
+                    thirdLargestinArray[j] = thirdLargestinArray[i];
+                    thirdLargestinArray[i] = temp;
+                }
+            }
+        }
+        System.out.println();
+        System.out.println("Sorted in Descending");
+
+
+        for (Integer i:thirdLargestinArray) {
+            System.out.print(i+" ");
+        }
+        System.out.println();
+        for (Integer abc1:
+             abc) {
+            System.out.print(abc1);
+        }
     }
 }
